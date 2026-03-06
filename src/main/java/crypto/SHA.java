@@ -8,7 +8,7 @@ import java.security.MessageDigest;
 
 public class SHA {
     public static String hash(String data) throws Exception {
-        MessageDigest md = MessageDigest.getInstance("SHA-1");
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
         byte[] hashBytes = md.digest(data.getBytes());
         StringBuilder sb = new StringBuilder();
         for (byte b : hashBytes) {
@@ -20,6 +20,6 @@ public class SHA {
     public static void main(String[] args) throws Exception {
         String data = "Hello, World!";
         String hash = hash(data);
-        System.out.println("SHA-1 Hash: " + hash);
+        System.out.println("SHA-256 Hash: " + hash);
     }
 }
